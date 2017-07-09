@@ -3,38 +3,45 @@ import Character from '../sprites/Character'
 
 export default class extends Phaser.State {
 
-  init() { }
-  preload() { }
+  init () { }
+  preload () { }
 
-  create() {
+  create () {
     this.character = new Character({
       game: this.game,
       x: this.world.centerX,
       y: this.world.centerY,
       asset: 'character',
-      frame: 2
+      frame: 2,
+      speed: 5
     })
+    this.game.add.tileSprite(
+      0,
+      0,
+      512,
+      512,
+      'tileBrick'
+    )
     this.camera.follow(this.character)
     this.game.add.existing(this.character)
     this.cursors = game.input.keyboard.createCursorKeys();
   }
 
   update () {
+    let direction = ''
     if (this.cursors.up.isDown) {
-      this.character.animations.play('up')
-      this.lastDirection = 'up'
+      direction = 'up'
     } else if (this.cursors.down.isDown) {
-      this.character.animations.play('down')
-      this.lastDirection = 'down'
+      direction = 'down'
     } else if (this.cursors.left.isDown) {
-      this.character.animations.play('left')
-      this.lastDirection = 'left'
+      direction = 'left'
     } else if (this.cursors.right.isDown) {
-      this.character.animations.play('right')
-      this.lastDirection = 'right'
+      direction = 'right'
     } else {
-      this.character.animations.stop()
+      direction = 'stop'
     }
+
+    this.character.move(direction)
   }
 
   render() {
