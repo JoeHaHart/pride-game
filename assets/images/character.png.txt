@@ -1,0 +1,1 @@
+character_01.png.png 0 1, character_02.png.png 20 0, character_03.png.png 41 0, character_04.png.png 62 2, character_05.png.png 82 1, character_06.png.png 101 2, character_07.png.png 121 2, character_08.png.png 142 1, character_09.png.png 162 2, character_10.png.png 180 1, character_11.png.png 200 0, character_12.png.png 221 1.
