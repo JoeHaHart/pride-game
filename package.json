@@ -1,0 +1,17 @@
+{
+  "name": "pride-game",
+  "version": "0.1.0",
+  "description": "A silly game about defeating shame with rainbows",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "phaser": "^2.6.2"
+  },
+  "devDependencies": {
+    "webpack": "^3.1.0"
+  }
+}
