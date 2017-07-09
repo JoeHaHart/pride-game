@@ -1,7 +1,4 @@
-language: ruby
-rvm:
-- 2.3.3
-install: npm install
+install: npm install --verbose
 script: npm run deploy
 deploy:
   provider: pages
