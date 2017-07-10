@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack",
-    "deploy": "webpack --config webpack.production.config.js && mkdir pages && mv index.html pages && mv dist pages",
+    "deploy": "rm -rf pages && webpack --config webpack.production.config.js && mkdir pages && mkdir pages/assets && cp index.html pages && cp -r dist pages && cp -r ./assets ./pages",
     "test": "eslint ./src/**/**.js"
   },
   "author": "Joe Hart <joehart42@gmail.com>",
